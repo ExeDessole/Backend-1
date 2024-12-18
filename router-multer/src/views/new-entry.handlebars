@@ -1,0 +1,48 @@
+{{> admin}}
+
+<div class="container p-4">
+    <form method="POST" action="/products/new-entry" class="card card-body" id="inputProduct">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Entry title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="Entry description">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" name="price" id="price" placeholder="$">
+        </div>
+        <div class="form-group">
+            <label for="thumbnail">Image</label>
+            <input type="text" class="form-control" name="thumbnail" id="thumbnail" placeholder="http:/website.com">
+        </div>
+        <div class="form-group">
+            <label for="code">Code</label>
+            <input type="text" class="form-control" name="code" id="code" placeholder="Entry code">
+        </div>
+        <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="text" class="form-control" name="stock" id="stock" placeholder="Units">
+        </div>
+        <input type="submit" value="Save Product" class="btn btn-primary">
+        
+    </form>
+</div>
+<div>
+    {{#each productsList}}
+        <div class="card" style="width: 18rem;">
+            <img src="{{this.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}} $: {{this.price}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <p class="card-text">Stock: {{this.stock}}</p>
+                {{!-- <a href="#" class="btn btn-danger">Delete</a> --}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/new-entry.js"></script>
+

@@ -1,0 +1,119 @@
+[
+	{
+		"title": "Socket",
+		"description": "Elemento enviado con socket",
+		"price": "999",
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/1200px-Socket-io.svg.png",
+		"code": "Socket",
+		"stock": "88",
+		"id": "634d3ce8-4396-462f-9364-ad68f39e6d7e"
+	},
+	{
+		"title": "Nuevo producto",
+		"description": "Enviaod con socket",
+		"price": "6767",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "sdfsdf",
+		"stock": "4444",
+		"id": "62f0ed49-09ce-46d9-a2ba-4f6512f045bc"
+	},
+	{
+		"title": "Ahora si",
+		"description": "Nuevo producto",
+		"price": "5000",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "4444",
+		"stock": "4444",
+		"id": "9169944c-dde9-4595-94da-1e6792397fd4"
+	},
+	{
+		"title": "Socket",
+		"description": "Socket",
+		"price": "500",
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/1200px-Socket-io.svg.png",
+		"code": "1234asd",
+		"stock": "4444",
+		"id": "b5e8ef16-f32f-4f46-8bf0-4d238ac4458e"
+	},
+	{
+		"title": "Eliana",
+		"description": "Banana",
+		"price": "1000000",
+		"thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGXO7aZuDVJfbq5_rahWneL0rLzbesoudad80ISO200P0iEIyzv2Udu8mUNp2mYe2O6_A&usqp=CAU",
+		"code": "1234",
+		"stock": "1",
+		"id": "ee0c0c27-9788-4f71-ae0a-e4d894a2e84f"
+	},
+	{
+		"title": "Eliana",
+		"description": "Banana",
+		"price": "1000000",
+		"thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGXO7aZuDVJfbq5_rahWneL0rLzbesoudad80ISO200P0iEIyzv2Udu8mUNp2mYe2O6_A&usqp=CAU",
+		"code": "1234",
+		"stock": "1",
+		"id": "361f819f-ac4f-42d1-b492-bda179805a9f"
+	},
+	{
+		"title": "Real Time Product",
+		"description": "Vista en tiempo real",
+		"price": "444",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "4444",
+		"stock": "50",
+		"id": "73fc5923-66c9-41b2-82b3-e758c70a32f2"
+	},
+	{
+		"title": "Real Time Product",
+		"description": "Vista en tiempo real",
+		"price": "444",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "4444",
+		"stock": "50",
+		"id": "aa4aa29b-5762-4377-8f26-4eb04b0db3c9"
+	},
+	{
+		"title": "Real Time Product",
+		"description": "Vista en tiempo real",
+		"price": "444",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "4444",
+		"stock": "50",
+		"id": "3f24a61d-ebaa-458d-9952-1b078f7760b4"
+	},
+	{
+		"title": "Render en new-entry",
+		"description": "renderiza el producto en la misma ruta",
+		"price": "500",
+		"thumbnail": "https://ik.imagekit.io/ably/ghost/prod/2021/03/socket-io-logo-1.jpeg?tr=w-1728,q-50",
+		"code": "1234asd",
+		"stock": "50",
+		"id": "39139657-cc18-4a65-b65b-05f8c4a11fb5"
+	},
+	{
+		"title": "qwefqef",
+		"description": "wefwef",
+		"price": "500",
+		"thumbnail": "https://res.cloudinary.com/exe/image/upload/v1645944636/Verde%20Boreal/tinJars_pwyeei.jpg",
+		"code": "1234asd",
+		"stock": "50",
+		"id": "b114fbc9-07ae-484a-a63f-161fa2d29c55"
+	},
+	{
+		"title": "aaaaaaa",
+		"description": "dosdfgdf",
+		"price": "500",
+		"thumbnail": "https://res.cloudinary.com/exe/image/upload/v1645944607/Verde%20Boreal/jabon_x1uzqa.png",
+		"code": "1234asd",
+		"stock": "50",
+		"id": "3c1546a6-d520-4454-b21e-c05470a23272"
+	},
+	{
+		"title": "ultimo agrtegado",
+		"description": "ultimo",
+		"price": "500",
+		"thumbnail": "https://res.cloudinary.com/exe/image/upload/v1645944607/Verde%20Boreal/jabon_x1uzqa.png",
+		"code": "asd123",
+		"stock": "50",
+		"id": "d764a0c9-7328-4221-8aea-ff7cdf21f72c"
+	}
+]

@@ -1,0 +1,30 @@
+<div>
+    {{> saludo}}
+    
+    {{#if singleProduct}}
+        <div class="card" style="width: 18rem;">
+            <img src="{{singleProduct.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{singleProduct.title}} $: {{singleProduct.price}}</h5>
+                <p class="card-text">{{singleProduct.description}}</p>
+                <p class="card-text">Stock: {{singleProduct.stock}}</p>
+                {{!-- <a href="#" class="btn btn-danger">Delete</a> --}}
+            </div>
+        </div>
+    {{else}}
+        {{#each productsList}}
+            <div class="card" style="width: 18rem;">
+                <img src="{{this.thumbnail}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}} $: {{this.price}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-text">Stock: {{this.stock}}</p>
+                    {{!-- <a href="#" class="btn btn-danger">Delete</a> --}}
+                </div>
+            </div>
+        {{/each}}
+    {{/if}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/home.js"></script>
