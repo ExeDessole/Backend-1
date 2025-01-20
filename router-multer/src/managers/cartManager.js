@@ -43,24 +43,21 @@ export default class CartManager{
 
   };
   
-  getCartByld = (id) =>{
+ 
+  getCartById = async (id) => {
     try {
-      const carts = this.getCart();
-      const checkCart = carts.findIndex(cart => cart.id === id);
-    if (checkCart === -1){
-      console.log('El carrito no existe')
-    }else{
-      const check = carts[checkCart]       
-        return check;   
-    }
+      const carts = await this.getCart();
+      const cart = carts.find(cart => cart.id === id); // Busca el carrito directamente
+      return cart || null; // Retorna el carrito o null si no existe
     } catch (error) {
       console.log(error);
+      return null; // En caso de error, retorna null
     }
-
   };
+  
 
-  deleteCart = (id) =>{
-    const carts = this.getCart();
+  deleteCart = async (id) =>{
+    const carts = await this.getCart();
     const checkCart = carts.findIndex(cart => cart.id === id);
     
     if (checkCart === -1){
