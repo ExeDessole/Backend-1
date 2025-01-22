@@ -31,23 +31,16 @@ router.get('/', async (req, res, next) => {
     next(error); // Pasa el error al siguiente middleware de manejo de errores
   }
 });
-// Este codigo no me retorna el limite asignado
-// router.get('/', async (req, res) =>{
-//   try {
-//     const limit = parseInt(req.query.limit);
-//     console.log(limit);
-    
-//     const user = { name: 'Exe', role: 'user' };
-//     const productsList = await products.getProduct();
-  
-//     if(!isNaN(limit)){  
-//       console.log(productsList);
-//       return res.status(200).render('home', {user, productsList});
-//     }
-//     return res.status(200).render('home', { user, products: productsList.slice(0, limit) });
-//   } catch (error) {
-//     res.status(401).send('download failed - products');
-//   }
-//   });
+// Ruta para vista principal (productos)
+router.get('/', async (req, res) => {
+  const products = await productManager.getProducts();
+  res.render('home', { productsList: products });
+});
+
+// Ruta para vista con WebSocket (realtimeproducts)
+router.get('/realtimeproducts', async (req, res) => {
+  const products = await productManager.getProducts();
+  res.render('realtimeproducts', { productsList: products });
+});
 
 export default router;

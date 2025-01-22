@@ -34,27 +34,30 @@ app.use((err, req, res, next) =>{
 });
 // Server
 const server = app.listen(8081, () => console.log('Server runnin on port 8081'));
+
 // Socket
 const io = new Server(server);
-io.on('connection', async (socket) =>{
-    console.log('nueva conexion:', socket.id);
-        const productList = await productManager.getProducts();
 
-    socket.on('client:new-entry', async (product) =>{
-        console.log(JSON.stringify(product));
+io.on('connection', async (socket) => {
+    console.log('Nueva conexión:', socket.id);
+
+    // Enviar lista inicial de productos al cliente
+    const productList = await productManager.getProducts();
+    socket.emit('server:productList', productList);
+
+    // Escuchar cuando se agrega un producto
+    socket.on('client:new-entry', async (product) => {
         await productManager.addProduct(product);
-        console.log(product);
-        
-        socket.emit('server:productList', productList);
-    })
-    
-    // socket.on('deleteProduct', async (id) => {              //Delete product comm
-    //   console.log(JSON.stringify(id));
-    //   await productManager.deleteProduct(id);
-    //   products = await productManager.getProducts();
-    // });
-  
-    
-  });
+        const updatedProductList = await productManager.getProducts();
+        io.emit('server:productList', updatedProductList); // Enviar a todos los clientes
+    });
+
+    // Escuchar cuando se elimina un producto
+    socket.on('client:delete-product', async (id) => {
+        await productManager.deleteProduct(id);
+        const updatedProductList = await productManager.getProducts();
+        io.emit('server:productList', updatedProductList); // Enviar a todos los clientes
+    });
+});
 
 app.set('socketio', io);

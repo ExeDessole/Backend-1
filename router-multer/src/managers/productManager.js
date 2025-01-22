@@ -52,33 +52,18 @@ export default class ProductManager{
     } 
   };
     
-  // updateProduct = (id,newPrice) =>{
-
-  //   const products = this.getProduct();
-  //   const checkProduct = products.findIndex(product => product.id === id);
-
-  //   const changePrice= products[checkProduct].price;
-
-  //   if (changePrice === newPrice){
-  //     console.log('El precio es igual al ingresado');
-  //   }else{
-  //     products[checkProduct].price = newPrice;
-  //     return;
-  //   };
-
-  // };
   
-  // deleteProduct = (id) =>{
-  //   const products = this.getProduct();
-  //   const checkProduct = products.findIndex(product => product.id === id);
+  deleteProduct =async(id) =>{
+    const products = this.getProduct();
+    const checkProduct = this.products = this.products.filter(product => product.id !== id);
     
-  //   if (checkProduct === -1){
-  //     console.log('El producto no existe');
-  //   }else{
-  //     delete products[checkProduct];
-  //     console.log('El producto ha sido eliminado');
-  //   }
+    if (checkProduct === -1){
+      console.log('El producto no existe');
+    }else{
+      delete products[checkProduct];
+      console.log('El producto ha sido eliminado');
+    }
 
-  // };
+  };
   
 };
