@@ -6,7 +6,7 @@ import cartsRouter from './routes/carts.router.js';
 import viewsRouter from './routes/views.router.js'
 import { __dirname } from './utils.js';
 import path from 'path';
-import ProductManager from './managers/productManager.js';
+import productManager from './managers/productManager.js';
 
 // Express config
 const app = express();
